@@ -1,11 +1,11 @@
 import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
-export class Student1598658504381 implements MigrationInterface {
+export class Teacher1600638122362 implements MigrationInterface {
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'students', // Nome da tabela
+        name: 'teacher', // Nome da tabela
         columns: [ // Cria um array com as scolunas
           {
             name: 'id',
@@ -18,25 +18,25 @@ export class Student1598658504381 implements MigrationInterface {
             name: 'name',
             type: 'varchar',
             length: '45',
-          }, // COLUNA NAME
-          {
-            name: 'age',
-            type: 'int',
-          }, // COLUNA AGE
-          {
-            name: 'responsible',
-            type: 'varchar',
-            length: '45',
-          }, // COLUNA RESPONSIBLE
-          {
-            name: 'class',
-            type: 'varchar',
-            length: '45',
-          }, // COLUNA CLASS
+          }, // COLUNA NOME
           {
             name: 'status',
             type: 'int',
           }, // COLUNA STATUS
+          {
+            name: 'username',
+            type: 'varchar',
+            length: '45',
+          }, // COLUNA USUÁRIO
+          {
+            name: 'email',
+            type: 'varchar',
+            length: '255',
+          }, // COLUNA EMAIL
+          {
+            name: 'password',
+            type: 'text',
+          }, // COLUNA SENHA
           {
             name: 'created_at',
             type: 'timestamp',
@@ -53,7 +53,7 @@ export class Student1598658504381 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('students');
+    await queryRunner.dropTable('teacher');
   }
 
 }
