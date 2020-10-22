@@ -16,7 +16,7 @@ export class Classes1600639631633 implements MigrationInterface {
           }, // COLUNA ID
           {
             name: 'date',
-            type: 'timestamp',
+            type: 'timestamp with time zone',
           }, // COLUNA DATA DA AULA
           {
             name: 'time',

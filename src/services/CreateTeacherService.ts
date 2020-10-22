@@ -30,7 +30,7 @@ class CreateTeacherService {
 
 		const teacher = usersRepository.create({
       name,
-      status,
+      status: true,
       username,
       email,
 			password: hashPassword,
